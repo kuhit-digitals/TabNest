@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TabNest</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🪺 TabNest</h1>
+
+        <p class="subtitle">
+            Never lose your browser context.
+        </p>
+
+        <input
+            id="prompt"
+            type="text"
+            placeholder="Type a command..."
+        >
+
+        <button id="executeBtn">
+            Execute
+        </button>
+
+        <h2>Recent Workspaces</h2>
+
+        <div id="workspaceList"></div>
+
+        <p id="status">
+            Ready
+        </p>
+
+    </div>
+<script src="tabs.js"></script>
+<script src="storage.js"></script>
+<script src="ai.js"></script>
+<script src="popup.js"></script>
+
+</body>
+</html>
