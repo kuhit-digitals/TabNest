@@ -132,6 +132,10 @@ A demo video and screenshots will be added soon.
 - Automatic workspace suggestions
 - Workspace sharing
 
+## 🙏 Acknowledgements
+
+This project was built as part of the NYC CodeQuest 2026 Hackathon. It uses the Google Gemini API for natural language understanding and Chrome Extension APIs for browser automation.
+
 ---
 
 ## 📄 License
