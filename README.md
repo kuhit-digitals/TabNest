@@ -154,7 +154,7 @@ Traditional bookmarks save only individual websites—not complete workspaces.
 | <img src="assets/home.png" width="420"> | <img src="assets/command.png" width="420"> |
 
 | Output |
-|:----------------:|:------------------:|
+|:------:|
 | <img src="assets/output.png" width="420"> |
 
 </div>
