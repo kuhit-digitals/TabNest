@@ -1,4 +1,4 @@
-const API_KEY = "gemini-gitapi-key";
+const API_KEY = "YOUR-API-HERE";
 
 async function askGemini(userPrompt) {
 

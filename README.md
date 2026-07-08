@@ -1,67 +1,183 @@
+<p align="center">
+  <img src="assets/banner.png" alt="TabNest Banner" width="100%">
+</p>
+<div align="center">
+
 # 🪺 TabNest
 
-TabNest is an AI-powered Chrome Extension that helps users save, organize, and restore browser workspaces using natural language.
+### 🚀 AI-Powered Browser Workspace Manager
 
-Instead of manually creating bookmarks or remembering which tabs were open, users can simply type commands like:
+#### Save • Organize • Restore Browser Workspaces Using Natural Language
 
-- Save current tabs as Study
-- Open Study
-- Rename Study to Semester 1
-- Delete Shopping
-- Add current tabs to Study
+<p>
+  <img src="https://img.shields.io/badge/Chrome-Extension-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white">
+  <img src="https://img.shields.io/badge/Manifest-V3-34A853?style=for-the-badge">
+  <img src="https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/Google-Gemini-4285F4?style=for-the-badge&logo=google">
+  <img src="https://img.shields.io/badge/Hackathon-NYC_CodeQuest_2026-EA4335?style=for-the-badge">
+</p>
 
-TabNest understands the user's intent using Google's Gemini API and performs the requested action automatically.
+### 🌟 Built with AI to make browser workspace management effortless.
 
----
-
-## 📌 Why I Built This
-
-While studying or working on multiple projects, I often end up with dozens of browser tabs open. Closing Chrome or restarting my laptop means losing my workflow, and finding everything again takes time.
-
-Bookmarks are useful for saving individual websites, but they don't preserve an entire working session.
-
-TabNest was built to make workspace management simple by allowing users to interact with their browser using natural language.
+</div>
 
 ---
 
-## ✨ Features
+# 📚 Table of Contents
 
-- 🤖 AI-powered natural language commands
-- 💾 Save current tabs as a workspace
-- 🚀 Open saved workspaces instantly
-- ✏️ Rename existing workspaces
-- 🗑️ Delete workspaces
-- ➕ Update existing workspaces with current tabs
-- 📋 View all saved workspaces inside the extension
-- 🚫 Prevent duplicate tabs while updating
-
----
-
-## 🛠️ Tech Stack
-
-- HTML
-- CSS
-- Vanilla JavaScript
-- Chrome Extension (Manifest V3)
-- Chrome Tabs API
-- Chrome Storage API
-- Google Gemini API
+- [📖 About](#-about)
+- [💡 Why TabNest?](#-why-tabnest)
+- [✨ Features](#-features)
+- [🛠 Tech Stack](#-tech-stack)
+- [⚙️ How It Works](#️-how-it-works)
+- [📸 Screenshots](#-screenshots)
+- [🎥 Demo](#-demo)
+- [📂 Project Structure](#-project-structure)
+- [🚀 Installation](#-installation)
+- [💬 Example Commands](#-example-commands)
+- [🗺 Future Roadmap](#-future-roadmap)
+- [🙏 Acknowledgements](#-acknowledgements)
+- [📄 License](#-license)
 
 ---
 
-## ⚙️ How It Works
+# 📖 About
 
-1. The user enters a command in natural language.
-2. The command is sent to the Gemini API.
-3. Gemini converts the sentence into structured JSON.
-4. The extension performs the required action using Chrome APIs.
-5. Workspace data is stored locally using Chrome Storage.
+TabNest is an **AI-powered Chrome Extension** that allows users to save, organize, update, and restore browser workspaces using simple natural language commands.
 
----
+Instead of manually creating bookmarks or remembering dozens of tabs, simply type commands like:
 
-## 📂 Project Structure
+```text
+Save current tabs as Study
 
+Open Study
+
+Rename Study to Semester 1
+
+Delete Shopping
+
+Add current tabs to Study
 ```
+
+TabNest understands the user's intent using **Google Gemini AI** and performs the requested action automatically.
+
+---
+
+# 💡 Why TabNest?
+
+Managing browser tabs becomes difficult when working on multiple projects, studying different subjects, or researching online.
+
+Closing Chrome or restarting a laptop often results in losing an entire workflow.
+
+Traditional bookmarks save only individual websites—not complete workspaces.
+
+**TabNest solves this by allowing users to save and restore complete browser sessions using natural language.**
+
+---
+
+# ✨ Features
+
+| 🚀 Feature | Description |
+|------------|-------------|
+| 🤖 AI Natural Language Commands | Understands commands using Google Gemini |
+| 💾 Save Workspace | Save all currently opened tabs |
+| 🚀 Restore Workspace | Instantly reopen saved workspaces |
+| ✏️ Rename Workspace | Rename saved workspaces anytime |
+| 🗑 Delete Workspace | Remove unnecessary workspaces |
+| ➕ Update Workspace | Add current tabs to existing workspaces |
+| 📋 Workspace Manager | View all saved workspaces |
+| 🚫 Duplicate Prevention | Avoid duplicate tabs while updating |
+
+---
+
+# 🛠 Tech Stack
+
+| Category | Technologies |
+|----------|--------------|
+| Frontend | HTML5 • CSS3 • Vanilla JavaScript |
+| Browser APIs | Chrome Tabs API • Chrome Storage API |
+| Extension | Chrome Extension Manifest V3 |
+| Artificial Intelligence | Google Gemini API |
+
+---
+
+# ⚙️ How It Works
+
+```text
+          👤 User
+
+             │
+
+             ▼
+
+   Natural Language Command
+
+             │
+
+             ▼
+
+      Google Gemini AI
+
+             │
+
+             ▼
+
+      Structured JSON Output
+
+             │
+
+             ▼
+
+      Command Processing
+
+             │
+
+             ▼
+
+ Chrome Tabs API + Storage API
+
+             │
+
+             ▼
+
+ Workspace Saved / Opened
+```
+
+---
+
+# 📸 Screenshots
+
+<div align="center">
+
+| Home | AI Command |
+|:----:|:----------:|
+| <img src="assets/home.png" width="420"> | <img src="assets/command.png" width="420"> |
+
+| Output |
+|:----------------:|:------------------:|
+| <img src="assets/output.png" width="420"> |
+
+</div>
+
+# 🎥 Demo
+
+<div align="center">
+
+## 📺 Watch TabNest in Action
+
+[![🎬 Full Demo](https://img.shields.io/badge/▶️_Full_Project_Demo-Watch_Soon-red?style=for-the-badge)](https://youtube.com)
+
+[![⚡ Short Demo](https://img.shields.io/badge/⚡_60_Second_Demo-Watch_Soon-blue?style=for-the-badge)](https://youtube.com)
+
+</div>
+
+> 🚧 Demo videos will be uploaded to YouTube shortly after submission.
+
+---
+
+# 📂 Project Structure
+
+```text
 TabNest/
 │
 ├── manifest.json
@@ -71,39 +187,49 @@ TabNest/
 ├── tabs.js
 ├── storage.js
 ├── ai.js
+│
+├── icons/
+│
+├── README.md
+│
+└── assets/
 ```
 
 ---
 
-## 🚀 Installation
+# 🚀 Installation
 
-1. Clone this repository.
+### 1️⃣ Clone the repository
 
-```
-git clone https://github.com/YOUR_USERNAME/TabNest.git
-```
-
-2. Open Chrome and go to:
-
-```
-chrome://extensions/
+```bash
+git clone https://github.com/kuhit-digitals/TabNest.git
 ```
 
-3. Enable **Developer Mode**.
+### 2️⃣ Open Chrome
 
-4. Click **Load unpacked**.
+```
+chrome://extensions
+```
 
-5. Select the project folder.
+### 3️⃣ Enable **Developer Mode**
 
-6. Add your own Google Gemini API key inside `ai.js`.
+### 4️⃣ Click **Load unpacked**
 
-7. The extension is ready to use.
+### 5️⃣ Select the project folder
+
+### 6️⃣ Add your Google Gemini API Key inside
+
+```
+ai.js
+```
+
+### 7️⃣ Start using TabNest 🚀
 
 ---
 
-## 💬 Example Commands
+# 💬 Example Commands
 
-```
+```text
 Save current tabs as Study
 
 Open Study
@@ -113,31 +239,55 @@ Rename Study to Semester 1
 Delete Semester 1
 
 Add current tabs to Study
+
+Save current tabs as Web Development
+
+Open Web Development
 ```
 
 ---
 
-## 📸 Demo
+# 🗺 Future Roadmap
 
-A demo video and screenshots will be added soon.
-
----
-
-## 🔮 Future Improvements
-
-- Export and import workspaces
-- Cloud synchronization
-- Workspace search
-- Keyboard shortcuts
-- Automatic workspace suggestions
-- Workspace sharing
-
-## 🙏 Acknowledgements
-
-This project was built as part of the NYC CodeQuest 2026 Hackathon. It uses the Google Gemini API for natural language understanding and Chrome Extension APIs for browser automation.
+- ☁️ Cloud Synchronization
+- 📤 Import / Export Workspaces
+- 🔍 Workspace Search
+- 🤖 AI Workspace Suggestions
+- 🎤 Voice Commands
+- ⌨️ Keyboard Shortcuts
+- 👥 Workspace Sharing
+- 🌐 Cross-Browser Support
 
 ---
 
-## 📄 License
+# 🙏 Acknowledgements
 
-This project was developed for the NYC CodeQuest 2026 Hackathon.
+This project was developed for **NYC CodeQuest 2026**.
+
+Special thanks to:
+
+- 💙 Google Gemini API
+- 🌐 Chrome Extension APIs
+- 🚀 NYC CodeQuest Organizers
+
+for providing the opportunity to build innovative solutions.
+
+---
+
+# 📄 License
+
+This project was created for educational and hackathon purposes as part of **NYC CodeQuest 2026**.
+
+---
+
+<div align="center">
+
+## ⭐ If you enjoyed this project, consider giving it a Star!
+
+### Made with ❤️ by **Phoenix Forge**
+
+*"Forging Ideas Into Reality."*
+
+🚀 NYC CodeQuest 2026
+
+</div>
