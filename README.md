@@ -165,9 +165,9 @@ Traditional bookmarks save only individual websites—not complete workspaces.
 
 ## 📺 Watch TabNest in Action
 
-[![🎬 Full Demo](https://img.shields.io/badge/▶️_Full_Project_Demo-Watch_Soon-red?style=for-the-badge)](https://youtube.com)
+[![🎬 Full Demo](https://img.shields.io/badge/▶️_Full_Project_Demo-Watch_Soon-red?style=for-the-badge)](https://www.youtube.com/watch?v=PlbmFMz2Avk)
 
-[![⚡ Short Demo](https://img.shields.io/badge/⚡_60_Second_Demo-Watch_Soon-blue?style=for-the-badge)](https://youtube.com)
+[![⚡ Short Demo](https://img.shields.io/badge/⚡_60_Second_Demo-Watch_Soon-blue?style=for-the-badge)](https://youtube.com/shorts/wQXzRMaGhj4?si=PklpaEVo1nc-OB8n)
 
 </div>
 
