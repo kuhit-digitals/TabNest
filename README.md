@@ -40,7 +40,43 @@
 - [📄 License](#-license)
 
 ---
+## 🚀 What's New in TabNest v2.0
 
+TabNest just got a major upgrade! Version 2 introduces more flexibility, smarter command handling, and the ability to connect your own AI provider.
+
+### ✨ New Features & Improvements
+
+- **🔌 Bring Your Own AI API:** Connect your own AI provider using an API key, endpoint, and model name.
+- **🤖 Custom AI Integration:** Use supported OpenAI-compatible APIs instead of being restricted to one built-in provider.
+- **⚡ Offline Command Processing:** TabNest includes a built-in command parser, so basic workspace operations can work without an external AI API.
+- **🧠 Smarter Command Understanding:** Improved natural-language recognition for saving, opening, renaming, updating, and deleting workspaces.
+- **🔄 Automatic Offline Fallback:** If your custom AI request fails, TabNest can fall back to its local command parser.
+- **⚙️ AI Configuration Panel:** Switch between offline and custom AI modes, configure your endpoint, choose a model, and test your connection.
+- **🗂️ Improved Workspace Management:** Better handling of saved workspaces and browser tabs.
+- **🔐 Permission-Based API Access:** Request access to the API host when connecting a custom provider.
+
+### 🆚 Version 1 vs Version 2
+
+| Feature | v1.0 | v2.0 |
+|---|---|---|
+| AI integration | Built-in Gemini integration | Configurable AI provider |
+| API configuration | Fixed | Custom endpoint, key & model |
+| Offline commands | No | Yes |
+| AI failure fallback | No | Yes |
+| Command recognition | Basic | Improved |
+| AI settings panel | No | Yes |
+
+### 💡 Why This Upgrade?
+
+TabNest v2 is designed to give users more control over how they interact with their browser workspaces. Instead of depending on a single AI provider, users can choose a supported provider or use the built-in offline command parser.
+
+**Your browser. Your workspaces. Your choice of AI.**
+
+---
+
+*TabNest v2.0 — Smarter workspace management, with more freedom.*
+
+---
 # 📖 About
 
 TabNest is an **AI-powered Chrome Extension** that allows users to save, organize, update, and restore browser workspaces using simple natural language commands.
