@@ -1,8 +1,9 @@
+
 {
   "manifest_version": 3,
   "name": "TabNest",
-  "version": "1.0.0",
-  "description": "Save and restore browser workspaces using natural language.",
+  "version": "1.1.0",
+  "description": "Save and restore browser workspaces using natural language and your preferred AI.",
 
   "action": {
     "default_popup": "popup.html"
@@ -13,7 +14,9 @@
     "storage"
   ],
 
-  "host_permissions": [
-    "https://generativelanguage.googleapis.com/*"
+  "optional_host_permissions": [
+    "https://*/*",
+    "http://localhost/*",
+    "http://127.0.0.1/*"
   ]
 }

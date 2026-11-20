@@ -1,10 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>TabNest</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="popup.css">
 </head>
 
@@ -12,35 +15,123 @@
 
     <div class="container">
 
-        <h1>🪺 TabNest</h1>
+        <header>
+            <h1>🪺 TabNest</h1>
+            <p class="subtitle">
+                Never lose your browser context.
+            </p>
+        </header>
 
-        <p class="subtitle">
-            Never lose your browser context.
-        </p>
 
-        <input
-            id="prompt"
-            type="text"
-            placeholder="Type a command..."
-        >
+        <section class="command-section">
 
-        <button id="executeBtn">
-            Execute
-        </button>
+            <input
+                id="prompt"
+                type="text"
+                placeholder="Try: Save current tabs as Study"
+            >
 
-        <h2>Recent Workspaces</h2>
+            <button id="executeBtn">
+                Execute Command
+            </button>
 
-        <div id="workspaceList"></div>
+        </section>
 
-        <p id="status">
+
+        <p id="status" role="status" aria-live="polite">
             Ready
         </p>
 
+
+        <section class="workspace-section">
+
+            <h2>Your Workspaces</h2>
+
+            <div id="workspaceList"></div>
+
+        </section>
+
+
+        <section class="settings-section">
+
+            <button id="settingsToggle" class="settings-toggle"
+                aria-expanded="false">
+                ⚙ AI Settings
+                <span>+</span>
+            </button>
+
+            <div id="settingsPanel" hidden>
+
+                <label for="aiEnabled">
+                    AI Mode
+                </label>
+
+                <select id="aiEnabled">
+                    <option value="false">Offline Mode</option>
+                    <option value="true">Use My Own AI API</option>
+                </select>
+
+                <p class="help-text">
+                    Offline mode requires no API. Custom mode
+                    supports OpenAI-compatible APIs.
+                </p>
+
+                <label for="apiEndpoint">
+                    API Endpoint
+                </label>
+
+                <input
+                    id="apiEndpoint"
+                    type="url"
+                    placeholder="https://api.example.com/v1/chat/completions"
+                >
+
+                <label for="apiModel">
+                    Model Name
+                </label>
+
+                <input
+                    id="apiModel"
+                    type="text"
+                    placeholder="Your model identifier"
+                >
+
+                <label for="apiKey">
+                    API Key
+                </label>
+
+                <input
+                    id="apiKey"
+                    type="password"
+                    placeholder="Enter your API key"
+                    autocomplete="off"
+                >
+
+                <button id="saveSettings">
+                    Save AI Settings
+                </button>
+
+                <button id="testConnection" class="secondary-btn">
+                    Test Connection
+                </button>
+
+                <p class="help-text">
+                    Your API key is stored locally in Chrome storage.
+                    It is not encrypted and should only be used on
+                    a trusted browser profile.
+                </p>
+
+            </div>
+
+        </section>
+
     </div>
-<script src="tabs.js"></script>
-<script src="storage.js"></script>
-<script src="ai.js"></script>
-<script src="popup.js"></script>
+
+
+    <script src="tabs.js"></script>
+    <script src="storage.js"></script>
+    <script src="ai.js"></script>
+    <script src="popup.js"></script>
 
 </body>
 </html>

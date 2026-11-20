@@ -1,74 +1,119 @@
+
+/* ==========================================
+   TABNEST WORKSPACE STORAGE
+========================================== */
+
+const WORKSPACE_KEY = "tabnest_workspaces";
+
+async function getAllWorkspaces() {
+
+    const data = await chrome.storage.local.get(WORKSPACE_KEY);
+
+    return data[WORKSPACE_KEY] || {};
+}
+
+
 async function saveWorkspace(name, tabs) {
 
-    const workspace = tabs.map(tab => ({
+    name = name.trim();
+
+    if (!name) throw new Error("Workspace name is required.");
+
+    const workspaces = await getAllWorkspaces();
+
+    if (workspaces[name]) {
+        throw new Error("A workspace with this name already exists.");
+    }
+
+    workspaces[name] = tabs.map(tab => ({
         title: tab.title,
         url: tab.url
     }));
 
     await chrome.storage.local.set({
-        [name]: workspace
+        [WORKSPACE_KEY]: workspaces
     });
 
 }
+
 
 async function getWorkspace(name) {
 
-    const data = await chrome.storage.local.get(name);
+    const workspaces = await getAllWorkspaces();
 
-    return data[name];
-
+    return workspaces[name] || null;
 }
-async function getAllWorkspaces() {
 
-    const data = await chrome.storage.local.get(null);
-
-    return data;
-
-}
 
 async function deleteWorkspace(name) {
 
-    await chrome.storage.local.remove(name);
+    const workspaces = await getAllWorkspaces();
 
-}
-async function renameWorkspace(oldName, newName) {
+    if (!workspaces[name]) {
+        throw new Error("Workspace not found.");
+    }
 
-    const workspace = await getWorkspace(oldName);
-
-    if (!workspace) return;
+    delete workspaces[name];
 
     await chrome.storage.local.set({
-        [newName]: workspace
+        [WORKSPACE_KEY]: workspaces
     });
 
-    await deleteWorkspace(oldName);
+}
+
+
+async function renameWorkspace(oldName, newName) {
+
+    const workspaces = await getAllWorkspaces();
+
+    if (!workspaces[oldName]) {
+        throw new Error("Original workspace not found.");
+    }
+
+    if (workspaces[newName]) {
+        throw new Error("A workspace with the new name already exists.");
+    }
+
+    workspaces[newName] = workspaces[oldName];
+
+    delete workspaces[oldName];
+
+    await chrome.storage.local.set({
+        [WORKSPACE_KEY]: workspaces
+    });
 
 }
+
+
 async function updateWorkspace(name, newTabs) {
 
-    const workspace = await getWorkspace(name);
+    const workspaces = await getAllWorkspaces();
 
-    if (!workspace) return;
+    if (!workspaces[name]) {
+        throw new Error("Workspace not found.");
+    }
 
-    const existingUrls = new Set(
-        workspace.map(tab => tab.url)
-    );
+    const existing = workspaces[name];
+
+    const urls = new Set(existing.map(tab => tab.url));
 
     for (const tab of newTabs) {
 
-        if (!existingUrls.has(tab.url)) {
+        if (!urls.has(tab.url)) {
 
-            workspace.push({
+            existing.push({
                 title: tab.title,
                 url: tab.url
             });
 
+            urls.add(tab.url);
         }
-
     }
 
+    workspaces[name] = existing;
+
     await chrome.storage.local.set({
-        [name]: workspace
+        [WORKSPACE_KEY]: workspaces
     });
 
 }
